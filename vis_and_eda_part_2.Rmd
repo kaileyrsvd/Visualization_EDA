@@ -3,7 +3,7 @@ title: "vis_and_eda_part_2"
 subtitle: "Part 2"
 author: "Kailey Rishovd"
 date: "10/9/2020"
-output: html_document
+output: github_document
 ---
 
 ```{r}
