@@ -33,3 +33,30 @@ weather_df =
 weather_df
 ```
 
+## Remember this plot ... ? 
+
+```{r}
+weather_df %>% 
+  ggplot(aes(x = tmin, y = tmax, color = name)) + 
+  geom_point(alpha = .5)
+```
+
+## Labels 
+
+```{r}
+weather_df %>% 
+  ggplot(aes(x = tmin, y = tmax, color = name)) + 
+  geom_point(alpha = .5) + 
+  labs(
+    title = "Temperature plot", 
+    x = "Minimum daily temperature (C)",
+    y = "Maximum daily temperature (C)", 
+    caption = "Data from rnoaa package, temperatures in 2017."
+  )
+```
+
+
+
+
+
+
