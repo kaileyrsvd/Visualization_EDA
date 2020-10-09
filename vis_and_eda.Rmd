@@ -1,0 +1,15 @@
+---
+title: "viz_and_eda"
+subtitle: "Part 1" 
+author: "Kailey Rishovd"
+date: "10/8/2020"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+library(ggridges)
+```
+
+
+
