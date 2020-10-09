@@ -53,11 +53,45 @@ weather_df
 ```{r}
 weather_df %>% 
   group_by(name, month) %>% 
-  ungroup(month)
+  ungroup(name, month)
 ```
 
+## counting things 
 
+count month / name observations 
 
+```{r}
+weather_df %>% 
+  group_by(name, month) %>% 
+  summarize(n_obs = n())
+```
+
+we can use `count()`
+
+```{r}
+weather_df %>% 
+  count(month, name = "n_obs")
+```
+
+**NEVER** use base R's `table` fxn 
+
+very bad idea to take a variable out of the dataset.... 
+
+```{r, eval = FALSE}
+weather_df %>% 
+  pull(month) %>% 
+  table()
+```
+
+other helpful counters
+
+```{r}
+weather_df %>% 
+  group_by(month) %>% 
+  summarize(
+    n_obs = n(),
+    n_day = n_distinct(date))
+```
 
 
 
